@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김연준 — Spatial Data Scientist / GIS·AI Engineer</title>
+<meta name="description" content="Python·SQL·GIS 기반 공간 데이터 분석과 머신러닝 모델링을 수행하는 Spatial Data Scientist 김연준의 포트폴리오.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- grid backdrop -->
+<div class="grid-field" aria-hidden="true"></div>
+
+<!-- elevation / scroll readout -->
+<div class="readout" aria-hidden="true">
+  <span class="readout__compass">
+    <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 2 L14.2 10 L12 22 L9.8 10 Z" fill="currentColor"/></svg>
+  </span>
+  <span class="readout__label">EL.</span>
+  <span class="readout__value" id="readoutValue">000</span>
+  <span class="readout__unit">M</span>
+</div>
+
+<nav class="topnav">
+  <a href="#hero" class="topnav__mark">金<span>연준</span></a>
+  <div class="topnav__links">
+    <a href="#stack">스택</a>
+    <a href="#experience">경력</a>
+    <a href="#research">연구</a>
+    <a href="#awards">수상</a>
+    <a href="mailto:yeonjun7724@gmail.com" class="topnav__cta">Contact</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="hero">
+    <svg class="hero__contours" id="contourSvg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+    <div class="hero__vignette" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <p class="coord">37.6584° N · 126.7693° E — Ilsan-gu, Gyeonggi-do, KR</p>
+      <h1 class="hero__name">김연준<span class="hero__name-en">Yeonjun Kim</span></h1>
+      <p class="hero__role">Spatial Data Scientist&nbsp;/&nbsp;GIS·AI Engineer</p>
+      <p class="hero__bio">
+        Python·SQL·GIS 기반 대규모 데이터 분석과 머신러닝 모델링을 수행합니다.
+        100GB 규모 서비스 로그, 5천만 건 공간 데이터, 제조 공정 시계열 이상 탐지까지 —
+        지형을 읽듯 데이터를 읽고, 좌표를 잇듯 인사이트를 잇는 일을 합니다.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="mailto:yeonjun7724@gmail.com">이메일 보내기</a>
+        <a class="btn btn--ghost" href="https://github.com/yeonjun7724" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <dl class="hero__stats">
+        <div><dt>경력</dt><dd>4년 3개월</dd></div>
+        <div><dt>교육 누적</dt><dd>500명+</dd></div>
+        <div><dt>수상</dt><dd>12건 · 그랜드프라이즈 4</dd></div>
+        <div><dt>논문</dt><dd>KCI 2편</dd></div>
+      </dl>
+    </div>
+    <a href="#stack" class="hero__scroll" aria-label="다음 섹션으로 스크롤">
+      <span></span>SCROLL
+    </a>
+  </section>
+
+  <!-- ============ STACK ============ -->
+  <section id="stack" class="section" data-reveal>
+    <header class="section__head">
+      <p class="eyebrow">LEGEND — 범례</p>
+      <h2>다루는 도구들</h2>
+      <p class="section__sub">데이터를 수집하고, 공간에 올리고, 모델로 해석하고, 화면에 보여주기까지.</p>
+    </header>
+
+    <div class="legend-grid">
+      <div class="legend">
+        <h3 class="legend__title"><span class="legend__dot" style="--c:#5EEAD4"></span>Geospatial</h3>
+        <ul class="legend__tags">
+          <li>QGIS</li><li>ArcGIS</li><li>PostgreSQL/PostGIS</li><li>GeoPandas</li><li>pgRouting</li><li>A*</li><li>GeoServer</li>
+        </ul>
+      </div>
+      <div class="legend">
+        <h3 class="legend__title"><span class="legend__dot" style="--c:#E8A865"></span>ML · Deep Learning</h3>
+        <ul class="legend__tags">
+          <li>Scikit-learn</li><li>TensorFlow</li><li>PyTorch</li><li>LSTM Autoencoder</li><li>Isolation Forest</li><li>ARIMA/SARIMAX</li><li>Prophet</li><li>MGWR / GWR</li>
+        </ul>
+      </div>
+      <div class="legend">
+        <h3 class="legend__title"><span class="legend__dot" style="--c:#8FB6FF"></span>Languages · DB</h3>
+        <ul class="legend__tags">
+          <li>Python</li><li>SQL</li><li>MySQL</li><li>PostgreSQL</li>
+        </ul>
+      </div>
+      <div class="legend">
+        <h3 class="legend__title"><span class="legend__dot" style="--c:#C792EA"></span>Visualization</h3>
+        <ul class="legend__tags">
+          <li>Tableau</li><li>Streamlit</li><li>Pydeck</li><li>Vercel</li><li>Railway</li>
+        </ul>
+      </div>
+      <div class="legend">
+        <h3 class="legend__title"><span class="legend__dot" style="--c:#5EEAD4"></span>AI Stack</h3>
+        <ul class="legend__tags">
+          <li>Claude &amp; Claude Cowork</li><li>Gemini &amp; Gems</li><li>ChatGPT</li><li>Perplexity</li><li>Midjourney</li><li>Nano Banana</li><li>Stable Diffusion</li>
+        </ul>
+      </div>
+      <div class="legend">
+        <h3 class="legend__title"><span class="legend__dot" style="--c:#E8A865"></span>Collaboration</h3>
+        <ul class="legend__tags">
+          <li>Slack</li><li>Jira</li><li>M365</li><li>Google Workspace</li><li>MS Copilot</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="section" data-reveal>
+    <header class="section__head">
+      <p class="eyebrow">SURVEY LOG — 경력 4년 3개월</p>
+      <h2>걸어온 경로</h2>
+      <p class="section__sub">제조 공정 이상탐지부터 5천만 건 규모 공간 데이터, 누적 500명 이상의 AI 실무 교육까지.</p>
+    </header>
+
+    <ol class="timeline">
+
+      <li class="tl-item">
+        <div class="tl-item__rail">
+          <span class="tl-item__dot"></span>
+          <span class="tl-item__period">2025.05 — 현재<br><em>1년 2개월</em></span>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__top">
+            <h3>주식회사 더코어 <span class="tag tag--current">재직중</span></h3>
+            <p class="tl-item__role">AI Engineer &amp; Data Scientist / GIS Expert</p>
+          </div>
+
+          <div class="tl-block">
+            <p class="tl-block__title">제조 공정 데이터를 활용한 열처리 공정 AI 이상탐지 모델 개발 <span class="tl-block__date">2026.03</span></p>
+            <p class="tl-metric"><strong>Precision 0.82</strong> · Rule 기반 대비 탐지율 <strong>20%↑</strong></p>
+            <ul>
+              <li>55만 건 규모 공정 센서 데이터(온도·압력·시간) 전처리 및 품질 검증</li>
+              <li>Isolation Forest 기반 비지도 이상 탐지 모델 구축</li>
+              <li>LSTM Autoencoder 기반 시계열 이상 탐지 모델 설계</li>
+            </ul>
+            <p class="tech">Python · Pandas · Scikit-learn · TensorFlow/PyTorch · Isolation Forest · LSTM Autoencoder</p>
+          </div>
+
+          <div class="tl-block">
+            <p class="tl-block__title">송파구 관광특구 재지정 지원을 위한 GIS 기반 관광분석 <span class="tl-block__date">2025.10 — 2025.11</span></p>
+            <p class="tl-metric">관광시설 <strong>1,281개</strong> · 외국인 방문객 <strong>54만 명</strong></p>
+            <ul>
+              <li>관광객·관광시설·숙박시설 공간DB 구축 및 GIS 분석</li>
+              <li>송리단길·방이시장·풍납토성 3개 권역 정량평가 및 우선순위 도출</li>
+            </ul>
+            <p class="tech">QGIS · PostGIS · Python · GeoPandas · 공간통계</p>
+          </div>
+
+          <div class="tl-block">
+            <p class="tl-block__title">상명대학교 천안캠퍼스 그린스마트시티학과 생성형 AI 강의 <span class="tl-block__date">2025.09 — 2025.12</span></p>
+            <ul>
+              <li>Python·SQL·GIS 데이터 분석 및 시각화 실습 지도</li>
+              <li>Midjourney·Stable Diffusion 기반 생성형 AI 및 프롬프트 엔지니어링 교육 (수강생 30명)</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="tl-item">
+        <div class="tl-item__rail">
+          <span class="tl-item__dot"></span>
+          <span class="tl-item__period">2025.01 — 현재<br><em>1년 6개월</em></span>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__top">
+            <h3>팀스파르타 <span class="tag">프리랜서</span></h3>
+            <p class="tl-item__role">Tutor in Data Analysis &amp; Science / AI Expert</p>
+          </div>
+
+          <div class="tl-block">
+            <p class="tl-block__title">기업체 AI 실무적용 교육 및 컨설팅 <span class="tl-block__date">2026.03 — 2026.06</span></p>
+            <p class="tl-metric">주요 기업 실무자 <strong>300명+</strong> 교육</p>
+            <ul class="tl-list--compact">
+              <li>LG에너지솔루션 — MS Copilot 시나리오 워크샵 / Agent 개발 교육</li>
+              <li>LG유플러스 — 팀장/팀원 대상 Copilot 시나리오 워크샵</li>
+              <li>삼성전자 DS — Claude Cowork 심화 교육 · MX사업부 — AI 기획서 작성 교육</li>
+              <li>ETRI · 세아홀딩스 · LG생활건강 · 롯데백화점 · 선진(Global VIL) AI PBL/AX 전환 교육</li>
+            </ul>
+          </div>
+
+          <div class="tl-block">
+            <p class="tl-block__title">Python·ML/DL·SQL·GIS 데이터 분석 전문 튜터 <span class="tl-block__date">2025.01 — 2026.03</span></p>
+            <p class="tl-metric">수강생 <strong>200명+</strong> · 프로젝트 멘토링 <strong>50건+</strong></p>
+            <ul>
+              <li>Pandas·SQL 기반 데이터 전처리·EDA 및 QGIS 공간데이터 분석 실습 지도</li>
+              <li>ARIMA·SARIMA·Prophet·LSTM 기반 시계열 분석 교육</li>
+            </ul>
+            <p class="tech">Python · Pandas · SQL · Scikit-learn · Tableau · QGIS</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="tl-item">
+        <div class="tl-item__rail">
+          <span class="tl-item__dot"></span>
+          <span class="tl-item__period">2024.11 — 2025.01<br><em>3개월</em></span>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__top">
+            <h3>주식회사 지바이크</h3>
+            <p class="tl-item__role">Marketing Data Analyst / GIS Expert</p>
+          </div>
+          <div class="tl-block">
+            <p class="tl-metric">이용 로그 <strong>2억 명</strong> 규모 · <strong>100GB</strong> 데이터 전처리</p>
+            <ul>
+              <li>지역·시간대별 이용 패턴 분석으로 핵심 수요 지역 도출</li>
+              <li>서비스 운영 핵심 KPI 5개 설계 및 모니터링 체계 구축</li>
+              <li>Tableau 기반 마케팅 의사결정 지원 대시보드 3종 구축</li>
+            </ul>
+            <p class="tech">Python · Pandas · SQL(MySQL) · Tableau</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="tl-item">
+        <div class="tl-item__rail">
+          <span class="tl-item__dot"></span>
+          <span class="tl-item__period">2022.10 — 2024.09<br><em>2년</em></span>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__top">
+            <h3>주식회사 망고시스템</h3>
+            <p class="tl-item__role">Data Engineer / GIS Expert</p>
+          </div>
+
+          <div class="tl-block">
+            <p class="tl-block__title">SaaS 공간분석 플랫폼 'Pinogio' Geocoding System 운영</p>
+            <p class="tl-metric">공간데이터 <strong>5천만 건</strong> · 정확도 <strong>약 2%↑</strong></p>
+            <ul>
+              <li>도로명주소·연속지적도 데이터 월 단위 업데이트 및 정합성 검증</li>
+              <li>PostgreSQL/PostGIS 기반 필지 공간데이터 관리 및 Spatial Query 처리</li>
+            </ul>
+            <p class="tech">Python · PostgreSQL · PostGIS · QGIS</p>
+          </div>
+
+          <div class="tl-block">
+            <p class="tl-block__title">교통밀집지역 주민건강영향조사 대상지역 선정 플랫폼 — 서경대 산학협력단</p>
+            <ul>
+              <li>전국 도로망·교통량 데이터 기반 공간 분석 데이터셋 구축</li>
+              <li>교통 환경 지표 3개 기반 건강영향 조사 대상지역 분석 모델 설계</li>
+            </ul>
+          </div>
+
+          <div class="tl-block">
+            <p class="tl-block__title">지형정보 분석을 위한 국방 디지털트윈 기술 개발 2차 — 방위사업청</p>
+            <ul>
+              <li>보안 환경에서 대체 공간 데이터베이스 설계 및 구축</li>
+              <li>위성영상 기반 Raster 데이터 전처리, 공간 레이어 <strong>25개</strong> 구축</li>
+            </ul>
+            <p class="tech">Python · QGIS · GeoServer · Raster Data Processing</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="tl-item">
+        <div class="tl-item__rail">
+          <span class="tl-item__dot"></span>
+          <span class="tl-item__period">2022.04 — 2022.09<br><em>6개월</em></span>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__top">
+            <h3>서강대학교 산학협력단</h3>
+            <p class="tl-item__role">Data Engineer</p>
+          </div>
+          <div class="tl-block">
+            <ul>
+              <li>학술 연구 데이터베이스 설계 및 테이블 스키마 설계</li>
+              <li>PostgreSQL 기반 연구 데이터 관리 환경 구축 및 분석 쿼리 작성</li>
+            </ul>
+            <p class="tech">PostgreSQL · SQL · Data Modeling</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="tl-item">
+        <div class="tl-item__rail">
+          <span class="tl-item__dot"></span>
+          <span class="tl-item__period">2022.10 — 2026.06<br><em>3년 9개월</em></span>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__top">
+            <h3>공간정보 전문교육강사 <span class="tag">프리랜서</span></h3>
+            <p class="tl-item__role">GIS Expert and Educator</p>
+          </div>
+          <div class="tl-block">
+            <ul>
+              <li>QGIS·Python(GeoPandas)·PostGIS 기반 공간 빅데이터 분석 교육 프로그램 운영</li>
+              <li>PGIS 기반 주민참여형 공간정보 구축 및 지역 현안 분석 프로젝트 실습 지도</li>
+              <li>서울대·동국대·상명대·남서울대·가톨릭관동대 등 대학 강의</li>
+              <li>외교부·한국항공우주연구원(KARI)·LX공사 공간정보아카데미 등 공공기관 교육</li>
+            </ul>
+            <p class="tech">Python · GeoPandas · QGIS · PostgreSQL/PostGIS · Tableau · PGIS</p>
+          </div>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section id="research" class="section" data-reveal>
+    <header class="section__head">
+      <p class="eyebrow">DATUM — 연구 / 논문</p>
+      <h2>공간을 통계로 증명하기</h2>
+      <p class="section__sub">동국대학교 일반대학원 지리학과 — Spatial Data Analysis · Spatial Statistics · Geo-AI</p>
+    </header>
+
+    <div class="paper-grid">
+      <article class="paper paper--feature">
+        <p class="paper__kicker">졸업 논문 · 2026</p>
+        <h3>LSTM을 활용한 GTX-A 정차역 영향권의<br>차별적 토지시장 가격변화에 대한 연구</h3>
+        <p class="paper__desc">
+          171,678건의 실거래 데이터, 240개월(2005–2024), 5개 역세권(운정중앙·킨텍스·대곡·연신내·서울역)을
+          ARIMA/SARIMAX/Prophet/LSTM으로 비교 분석. 개통 전후 가격 변화율은 대곡 +32.0%부터
+          연신내 −10.9%까지 역별로 뚜렷한 차이를 보였습니다.
+        </p>
+        <div class="paper__stats">
+          <div><strong>171,678</strong><span>거래 건</span></div>
+          <div><strong>240</strong><span>개월</span></div>
+          <div><strong>5</strong><span>역세권</span></div>
+        </div>
+      </article>
+
+      <article class="paper">
+        <p class="paper__kicker">KCI 논문 · 2026.03 · 국토연구</p>
+        <h3>고속철도 개통이 역세권 발전에 미친 영향 분석<br><span class="paper__sub">SRT 수서–목포 구간을 중심으로</span></h3>
+        <p class="paper__desc">
+          K-means 클러스터링으로 역세권을 4개 유형(성장형·정체형 등)으로 분류하고,
+          Kaplan–Meier 생존 분석으로 발전 지속성과 성장 패턴의 차이를 통계적으로 규명했습니다.
+        </p>
+        <p class="tech">Python · GeoPandas · Scikit-learn · Spatial Statistics</p>
+      </article>
+
+      <article class="paper">
+        <p class="paper__kicker">KCI 논문 · 2024.12 · 한국측량학회지</p>
+        <h3>공간통계를 활용한 강원특별자치도<br>워케이션 가능지역 추출에 관한 연구</h3>
+        <p class="paper__desc">
+          엔트로피 가중치 기반 입지 평가 지표와 Local Moran's I 공간 자기상관 분석,
+          MGWR 모델링으로 워케이션 잠재력 지역과 지역별 입지 요인의 공간적 이질성을 도출했습니다.
+        </p>
+        <p class="tech">Python · GeoPandas · MGWR · QGIS</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ AWARDS ============ -->
+  <section id="awards" class="section" data-reveal>
+    <header class="section__head">
+      <p class="eyebrow">MARKERS — 수상 / 공모전</p>
+      <h2>지도 위에 남긴 지점들</h2>
+      <p class="section__sub">국토·교통·관광·산림 데이터를 다루며 받은 12건의 수상, 그중 4건이 대상급입니다.</p>
+    </header>
+
+    <div class="award-grid">
+      <article class="award award--top">
+        <p class="award__org">LH · 서울대학교 — 2025.03</p>
+        <h3>2025 COMPAS 데이터 분석 경진대회 <em>대상</em></h3>
+        <p>GWR·MGWR 공간 회귀 분석과 Pydeck 기반 3D 시각화로 신규 SRT 역 인근 인구 변화 패턴을 분석했습니다.</p>
+      </article>
+      <article class="award award--top">
+        <p class="award__org">농림축산식품부 — 2025.08</p>
+        <h3>농식품 공공데이터 창업 경진대회 <em>축산물품질평가원장상</em></h3>
+        <p>Mapbox API 기반 도축장 반입 차량 경로 최적화 웹 서비스 프로토타입을 개발했습니다.</p>
+      </article>
+      <article class="award award--top">
+        <p class="award__org">한국측량학회 — 2025.08</p>
+        <h3>고정밀 전자지도 데이터 활용 혁신 경진대회 <em>한국측량학회장상</em></h3>
+        <p>Vector Medial Axis Transformation 기반 보행 경로 센터라인 추출 알고리즘을 구현했습니다.</p>
+      </article>
+      <article class="award award--top">
+        <p class="award__org">LH — 2023</p>
+        <h3>국토도시 데이터 분석 LH 과제 <em>LH 사장상</em></h3>
+        <p>영등포구 화재취약지역·소방차 진입곤란지역을 공간 자기상관·회귀 분석으로 도출했습니다.</p>
+      </article>
+    </div>
+
+    <ul class="award-list">
+      <li><span>2025</span>산림분야 빅데이터 AI 활용 창업경진대회 — 한국산림복지진흥원장상</li>
+      <li><span>2024</span>관광데이터 활용 공모전 — 우수상 (한국관광공사)</li>
+      <li><span>2024</span>춘천시 빅데이터공모전 — 춘천시장상</li>
+      <li><span>2024</span>영주시 빅데이터공모전 — 최우수상</li>
+      <li><span>2024</span>안양시 공공·빅데이터 활용 공모전 — 안양시장상</li>
+      <li><span>2024</span>국토도시 데이터 분석 LH 과제 영등포구 대상</li>
+      <li><span>2023</span>제주 위성 데이터 활용 경진대회 — 장려상</li>
+      <li><span>2023</span>문화관광 데이터 분석대회 — 최우수상</li>
+    </ul>
+  </section>
+
+  <!-- ============ EDUCATION + COMMUNITY ============ -->
+  <section id="education" class="section section--split" data-reveal>
+    <div class="split">
+      <header class="section__head section__head--tight">
+        <p class="eyebrow">FOUNDATION — 학력</p>
+        <h2>배움의 좌표</h2>
+      </header>
+      <div class="edu-card">
+        <p class="edu-card__period">2024.03 — 2026.08 · 졸업 예정</p>
+        <h3>동국대학교 일반대학원</h3>
+        <p class="edu-card__degree">지리학 석사수료</p>
+        <p>Spatial Data Analysis · Spatial Statistics · Geo-AI</p>
+      </div>
+      <div class="edu-card">
+        <p class="edu-card__period">2012.03 — 2020.08 · 졸업</p>
+        <h3>세종대학교</h3>
+        <p class="edu-card__degree">공간정보공학과 공학사 · 역사학과 문학사</p>
+        <p>Geo-Information Engineering (GIS) · Remote Sensing</p>
+      </div>
+      <div class="lang-row">
+        <span>영어 — 비즈니스 레벨</span><span class="lang-row__score">OPIC IM2 (2026.03)</span>
+      </div>
+    </div>
+
+    <div class="split">
+      <header class="section__head section__head--tight">
+        <p class="eyebrow">NETWORK — 커뮤니티</p>
+        <h2>함께 그린 지도</h2>
+      </header>
+      <div class="edu-card edu-card--accent">
+        <p class="edu-card__period">2025.07 — 현재</p>
+        <h3>'GeoNetwork' 리더</h3>
+        <p class="edu-card__degree">20–40 공간정보 커뮤니티</p>
+        <p>전국 20–40대 공간정보·GIS 분야 실무자 및 학생 <strong>83명</strong> 규모의 기술 교류·네트워킹 커뮤니티를 운영합니다.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer__eyebrow">DESTINATION — 다음 좌표</p>
+  <h2 class="footer__headline">지도 위의 다음 지점,<br>함께 찾아가겠습니다.</h2>
+  <div class="footer__contact">
+    <a href="mailto:yeonjun7724@gmail.com">yeonjun7724@gmail.com</a>
+    <a href="tel:+821073537724">+82 10-7357-3724</a>
+    <a href="https://github.com/yeonjun7724" target="_blank" rel="noopener">github.com/yeonjun7724</a>
+  </div>
+  <p class="footer__copy">© 2026 Yeonjun Kim. Built on a topographic survey of four years and three months.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
